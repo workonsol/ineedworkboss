@@ -1,0 +1,177 @@
+@import "tailwindcss";
+
+:root {
+  --font-inter: "Inter", sans-serif;
+  --font-pixel: "Press Start 2P", monospace;
+  --font-vt323: "VT323", monospace;
+
+  --green: #000000;
+  --green-dim: #222222;
+  --green-dark: #cccccc;
+  --green-glow: rgba(0, 0, 0, 0.12);
+  --bg: #ffffff;
+  --bg-card: #f5f5f5;
+  --bg-panel: #f0f0f0;
+  --border: #dddddd;
+  --border-bright: #000000;
+  --text-muted: #555555;
+  --blue: #000000;
+  --blue-bright: #000000;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--green);
+  font-family: var(--font-inter);
+  image-rendering: pixelated;
+}
+
+/* ─── SCANLINES OVERLAY ─── */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 9999;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(0, 0, 0, 0.04) 2px,
+    rgba(0, 0, 0, 0.04) 4px
+  );
+}
+
+/* ─── PIXEL BORDERS ─── */
+.pixel-box {
+  border: 2px solid #000000;
+  box-shadow: 0 0 0 1px rgba(0,0,0,0.08), inset 0 0 0 1px rgba(0,0,0,0.04);
+  border-radius: 0;
+}
+
+.pixel-box-dim {
+  border: 2px solid var(--border);
+  border-radius: 0;
+}
+
+/* ─── TEXT SHADOW (replaces glow) ─── */
+.glow {
+  text-shadow: 2px 2px 0px rgba(0,0,0,0.15);
+}
+
+.glow-blue {
+  text-shadow: 2px 2px 0px rgba(0,0,0,0.15);
+}
+
+/* ─── BLINK CURSOR ─── */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+.cursor::after {
+  content: "█";
+  animation: blink 1s step-start infinite;
+  margin-left: 2px;
+}
+
+/* ─── PIXEL BUTTON ─── */
+.pixel-btn {
+  font-family: var(--font-pixel);
+  font-size: 10px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border: 2px solid #000000;
+  background: transparent;
+  color: #000000;
+  padding: 12px 24px;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.1s;
+  text-decoration: none;
+  display: inline-block;
+  box-shadow: 4px 4px 0px #cccccc;
+}
+.pixel-btn:hover {
+  background: #000000;
+  color: #ffffff;
+  box-shadow: none;
+  transform: translate(4px, 4px);
+}
+
+.pixel-btn-blue {
+  border-color: #000000;
+  color: #000000;
+  box-shadow: 4px 4px 0px #cccccc;
+}
+.pixel-btn-blue:hover {
+  background: #000000;
+  color: #ffffff;
+  box-shadow: none;
+}
+
+/* ─── SCROLLBAR ─── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #f0f0f0; }
+::-webkit-scrollbar-thumb { background: #bbbbbb; border-radius: 0; }
+
+/* ─── GRID BACKGROUND ─── */
+.grid-bg {
+  background-image:
+    linear-gradient(rgba(0,0,0,0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,0,0,0.05) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+/* ─── MOBILE ─── */
+@media (max-width: 768px) {
+  .hide-mobile {
+    display: none !important;
+  }
+
+  .mobile-nav-link {
+    display: none !important;
+  }
+
+  .hero-padding {
+    padding-top: 80px !important;
+    padding-bottom: 40px !important;
+  }
+
+  .hero-boot-text {
+    font-size: 6px !important;
+    letter-spacing: 1px !important;
+  }
+
+  .hero-subtitle {
+    font-size: 14px !important;
+    letter-spacing: 1px !important;
+    padding: 0 8px;
+  }
+
+  .section-padding {
+    padding: 48px 16px !important;
+  }
+
+  .lore-box {
+    padding: 24px 20px !important;
+    font-size: 18px !important;
+  }
+
+  .stats-box {
+    font-size: 16px !important;
+    padding: 16px 18px !important;
+  }
+
+  .pfp-cta-box {
+    padding: 36px 20px !important;
+  }
+}
