@@ -346,13 +346,12 @@ export default function Home() {
               }}
             >
               <Image
-                src="/hero-art.webp"
-                alt="$WORK pixel art"
+                src="/art-zoom.jpg"
+                alt="$WORK zoom call art"
                 width={280}
                 height={280}
                 style={{
                   display: "block",
-                  imageRendering: "pixelated",
                   maxWidth: "min(280px, 80vw)",
                   height: "auto",
                 }}
@@ -366,7 +365,7 @@ export default function Home() {
               color: "#888888",
               letterSpacing: "2px",
             }}>
-              PIXEL_ART_V1.png
+              PROFESSIONAL_MODE.jpg
             </div>
           </div>
 
@@ -439,6 +438,31 @@ export default function Home() {
           >
             THE_LORE_OF_$WORK
           </h2>
+
+          {/* Couch art */}
+          <motion.div
+            initial={{ opacity: 0, x: 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            style={{ display: "flex", justifyContent: "center", marginBottom: "32px" }}
+          >
+            <div style={{
+              border: "2px solid #000000",
+              boxShadow: "4px 4px 0px #cccccc",
+              background: "#f5f5f5",
+              padding: "8px",
+              display: "inline-block",
+            }}>
+              <Image
+                src="/art-couch.jpg"
+                alt="$WORK degen on couch"
+                width={340}
+                height={260}
+                style={{ display: "block", maxWidth: "min(340px, 90vw)", height: "auto" }}
+              />
+            </div>
+          </motion.div>
 
           <div
             className="lore-box"
