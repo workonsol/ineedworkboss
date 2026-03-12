@@ -717,7 +717,7 @@ export default function Home() {
 
         <div style={{ display: "flex", justifyContent: "center", gap: "32px", marginBottom: "28px", flexWrap: "wrap" }}>
           {[
-            { label: "𝕏", href: "https://x.com/ineedworkboss" },
+            { label: "X", href: "https://x.com/ineedworkboss" },
             { label: "DEXSCREENER", href: "#" },
           ].map((link) => (
             <a
