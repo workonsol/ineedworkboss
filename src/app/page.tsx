@@ -128,20 +128,15 @@ export default function Home() {
           >
             <div
               style={{
-                position: "relative",
+                borderRadius: "50%",
                 border: "3px solid #000000",
                 boxShadow: "6px 6px 0px #cccccc",
                 background: "#f5f5f5",
                 padding: "6px",
                 display: "inline-block",
+                overflow: "hidden",
               }}
             >
-              {/* Pixel corner accents */}
-              <div style={{ position: "absolute", top: -2, left: -2, width: 12, height: 12, borderTop: "3px solid #000000", borderLeft: "3px solid #000000", background: "#ffffff" }} />
-              <div style={{ position: "absolute", top: -2, right: -2, width: 12, height: 12, borderTop: "3px solid #000000", borderRight: "3px solid #000000", background: "#ffffff" }} />
-              <div style={{ position: "absolute", bottom: -2, left: -2, width: 12, height: 12, borderBottom: "3px solid #000000", borderLeft: "3px solid #000000", background: "#ffffff" }} />
-              <div style={{ position: "absolute", bottom: -2, right: -2, width: 12, height: 12, borderBottom: "3px solid #000000", borderRight: "3px solid #000000", background: "#ffffff" }} />
-
               <Image
                 src="/art-mascot.png"
                 alt="$WORK mascot"
