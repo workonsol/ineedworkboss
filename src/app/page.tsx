@@ -6,7 +6,7 @@ import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import FloatingCards from "@/components/FloatingCards";
 
-const CA_PLACEHOLDER = "Coming Thursday";
+const CA_PLACEHOLDER = "A6pbakh6P2ogKttup8BTEJc5hjdXehN4Ky7EP5bspump";
 
 export default function Home() {
   const [copied, setCopied] = useState(false);
@@ -265,13 +265,13 @@ export default function Home() {
             <span
               style={{
                 fontFamily: "var(--font-vt323)",
-                fontSize: "clamp(20px, 3vw, 28px)",
+                fontSize: "clamp(14px, 2vw, 20px)",
                 color: "#000000",
                 wordBreak: "break-all",
-                letterSpacing: "2px",
+                letterSpacing: "1px",
               }}
             >
-              ⏳ LAUNCHING_THURSDAY...
+              A6pbakh6P2ogKttup8BTEJc5hjdXehN4Ky7EP5bspump
             </span>
             <button
               onClick={handleCopy}
@@ -300,7 +300,7 @@ export default function Home() {
               letterSpacing: "1px",
             }}
           >
-            {">"} CA_DROPS_THURSDAY. THE_GRIND_DOESNT_WAIT.
+            {">"} SOLANA. THE_GRIND_IS_LIVE.
           </p>
         </motion.div>
       </section>
@@ -718,7 +718,7 @@ export default function Home() {
         <div style={{ display: "flex", justifyContent: "center", gap: "32px", marginBottom: "28px", flexWrap: "wrap" }}>
           {[
             { label: "X", href: "https://x.com/ineedworkboss" },
-            { label: "DEXSCREENER", href: "#" },
+            { label: "DEXSCREENER", href: "https://dexscreener.com/solana/A6pbakh6P2ogKttup8BTEJc5hjdXehN4Ky7EP5bspump" },
           ].map((link) => (
             <a
               key={link.label}
