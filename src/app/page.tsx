@@ -143,15 +143,15 @@ export default function Home() {
               <div style={{ position: "absolute", bottom: -2, right: -2, width: 12, height: 12, borderBottom: "3px solid #000000", borderRight: "3px solid #000000", background: "#ffffff" }} />
 
               <Image
-                src="/hero-art.webp"
+                src="/art-mascot.png"
                 alt="$WORK mascot"
                 width={320}
                 height={320}
                 style={{
                   display: "block",
-                  imageRendering: "pixelated",
                   maxWidth: "min(320px, 70vw)",
                   height: "auto",
+                  borderRadius: "50%",
                 }}
               />
             </div>
